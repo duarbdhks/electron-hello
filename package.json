@@ -1,0 +1,19 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "duarbdhks",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --asar --overwite --all --ignore=dist",
+    "build:darwin": "electron-packager . --out=dist --asar --overwite --platform=darwin --arch=x64",
+    "compress":"cd dist; for file in `ls`; do zip -r -y $file.zip $file; done   "
+  },
+  "dependencies": {
+    "electron": "^1.8.4"
+  },
+  "devDependencies": {
+    "electron-packager": "^12.0.1"
+  }
+}
